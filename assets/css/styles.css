@@ -1,11 +1,12 @@
 /* Variables de Color */
 :root {
-    --primary-color: #1e40af;
-    --secondary-color: #0f766e;
-    --accent-color: #f59e0b;
-    --text-color: #1f2937;
-    --light-bg: #f9fafb;
+    --primary-color: #dc2626;
+    --secondary-color: #1f2937;
+    --accent-color: #6b7280;
+    --text-color: #111827;
+    --light-bg: #f3f4f6;
     --border-color: #e5e7eb;
+    --white: #ffffff;
     --shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
@@ -24,7 +25,7 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: var(--text-color);
     line-height: 1.6;
-    background-color: #ffffff;
+    background-color: var(--white);
 }
 
 .container {
@@ -95,7 +96,7 @@ body {
 
 .cta-button {
     background-color: var(--accent-color);
-    color: var(--text-color);
+    color: var(--white);
     padding: 12px 40px;
     border: none;
     border-radius: 50px;
@@ -103,19 +104,19 @@ body {
     font-weight: bold;
     cursor: pointer;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(245, 158, 11, 0.3);
+    box-shadow: 0 4px 15px rgba(107, 114, 128, 0.3);
 }
 
 .cta-button:hover {
-    background-color: #d97706;
+    background-color: #4b5563;
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(245, 158, 11, 0.4);
+    box-shadow: 0 6px 20px rgba(107, 114, 128, 0.4);
 }
 
 /* About Section */
 .about {
     padding: 80px 20px;
-    background-color: var(--light-bg);
+    background-color: var(--white);
     text-align: center;
 }
 
@@ -130,11 +131,13 @@ body {
     max-width: 600px;
     margin: 0 auto;
     line-height: 1.8;
+    color: var(--text-color);
 }
 
 /* Features Section */
 .features {
     padding: 80px 20px;
+    background-color: var(--light-bg);
 }
 
 .features h2 {
@@ -151,10 +154,10 @@ body {
 }
 
 .feature-card {
-    background-color: var(--light-bg);
+    background-color: var(--white);
     padding: 2rem;
     border-radius: 8px;
-    border-left: 4px solid var(--secondary-color);
+    border-left: 4px solid var(--primary-color);
     transition: all 0.3s ease;
     box-shadow: var(--shadow);
 }
@@ -171,67 +174,73 @@ body {
 }
 
 .feature-card p {
-    color: #6b7280;
+    color: var(--accent-color);
     line-height: 1.6;
 }
 
-/* Contact Section */
-.contact {
+/* Information Section */
+.information {
     padding: 80px 20px;
-    background-color: var(--light-bg);
+    background-color: var(--white);
 }
 
-.contact h2 {
+.information h2 {
     font-size: 2.5rem;
     text-align: center;
     margin-bottom: 3rem;
     color: var(--primary-color);
 }
 
-.contact-form {
-    max-width: 500px;
+.info-content {
+    max-width: 800px;
     margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
 }
 
-.contact-form input,
-.contact-form textarea {
-    padding: 12px 15px;
-    border: 1px solid var(--border-color);
-    border-radius: 4px;
-    font-family: inherit;
+.info-section {
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 2px solid var(--light-bg);
+}
+
+.info-section:last-child {
+    border-bottom: none;
+}
+
+.info-section h3 {
+    color: var(--secondary-color);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.info-section p {
+    color: var(--text-color);
+    line-height: 1.8;
     font-size: 1rem;
-    transition: border-color 0.3s ease;
 }
 
-.contact-form input:focus,
-.contact-form textarea:focus {
-    outline: none;
-    border-color: var(--primary-color);
-    box-shadow: 0 0 0 3px rgba(30, 64, 175, 0.1);
+.info-list {
+    list-style: none;
+    margin-top: 1rem;
 }
 
-.submit-button {
-    background-color: var(--primary-color);
-    color: white;
-    padding: 12px 30px;
-    border: none;
-    border-radius: 4px;
-    font-size: 1rem;
+.info-list li {
+    color: var(--text-color);
+    padding: 0.5rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.info-list li:before {
+    content: "•";
+    color: var(--primary-color);
     font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.submit-button:hover {
-    background-color: #1e3a8a;
+    position: absolute;
+    left: 0;
 }
 
 /* Footer */
 .footer {
-    background-color: var(--text-color);
+    background-color: var(--secondary-color);
     color: white;
     text-align: center;
     padding: 2rem 20px;
@@ -278,7 +287,7 @@ body {
 
     .about h2,
     .features h2,
-    .contact h2 {
+    .information h2 {
         font-size: 2rem;
     }
 
@@ -310,5 +319,9 @@ body {
     .cta-button {
         padding: 10px 30px;
         font-size: 0.9rem;
+    }
+
+    .info-section h3 {
+        font-size: 1.2rem;
     }
 }
